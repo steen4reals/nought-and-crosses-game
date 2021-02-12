@@ -62,7 +62,7 @@ function App() {
     <div className="App">
         <h1>Tic-tac-👣</h1>
         <Game renderSquare={renderSquare} />
-      
+        <p>Created By JJ and Christina</p>
        
     </div>
   );
