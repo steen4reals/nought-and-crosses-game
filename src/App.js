@@ -1,20 +1,21 @@
 import React from 'react';
 import "./App.css";
-import SqaureButton from "./buttonSquare/buttonSquare";
+import Square from "./Square/index";
+import Board from "./Board/index";
 
 function App() {
-
-
-
-
-
-
-
+  
+  
+  // function renderSquare(i){
+  //   return <Sqaure/>
+  //   };
+    
+    //   render() {
+    // const status = 'Next player: X';
   return (
     <div className="App">
         <h1>Tic-tac-toe</h1>
-        <SqaureButton />
-
+        <Square/>
 
     </div>
   );
@@ -22,15 +23,6 @@ function App() {
 
 export default App;
 
-// class Square extends React.Component {
-//   render() {
-//     return (
-//       <button className="square">
-//         {/* TODO */}
-//       </button>
-//     );
-//   }
-// }
 
 // class Board extends React.Component {
 //   renderSquare(i) {

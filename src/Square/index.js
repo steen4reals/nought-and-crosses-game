@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function SqaureButton(){
+function Square(){
    
           return (
             <button className="square">
@@ -10,5 +10,5 @@ function SqaureButton(){
           );
 };
 
-export default SqaureButton;
+export default Square;
       
