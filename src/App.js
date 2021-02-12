@@ -6,20 +6,10 @@ import { useState } from "react";
 import Game from './Game/index'
 
 function App() {
-  // const playerArray= ['X','O'];
-
   const[playerX,setPlayerX]=useState(true);
 
-  // const[squareValue,setSquareValue]=useState("");
-
   const [ squares, setSquares ] = useState(Array(9).fill(null));
-  
-  // function setSquareValueFunc(value){
-  //   console.log(value,player);
-    
-  //   value= setSquareValue(player);
-  //   console.log(value);
-  //   }
+
 
     function renderSquare(i) {
       return <Square
@@ -31,7 +21,7 @@ function App() {
               }else{
                 alert("X is the winner")
               }
-            return;
+            return ;
           }
 
           
@@ -43,14 +33,6 @@ function App() {
         }}
       />;
     }
-/* const winner = calculateWinner(this.state.squares);
-    let status;
-    if (winner) {
-      status = 'Winner: ' + winner;
-    } else {
-      status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
-    }
-    */
 
 
     function calculateWinner(squares) {
@@ -74,15 +56,13 @@ function App() {
       return null;
     }
 
-  
-
-
 
 
   return (
     <div className="App">
         <h1>Tic-tac-toe</h1>
         <Game renderSquare={renderSquare} />
+      
        
     </div>
   );
