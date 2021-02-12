@@ -16,13 +16,12 @@ function App() {
     console.log(value,player);
     
     value= setSquareValue(player);
-    value=squareValue;
     console.log(value);
     }
 
-  function renderSquare(squareValue){
+  function renderSquare(i){
 
-    return <Square value = {squareValue} setSquareValue={setSquareValueFunc}/>
+    return <Square value = {i} setSquareValue={setSquareValueFunc}/>
     }
     
     
