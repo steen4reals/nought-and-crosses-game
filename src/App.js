@@ -8,7 +8,7 @@ import Game from './Game/index'
 function App() {
   // const playerArray= ['X','O'];
 
-  // const[player,setPlayer]=useState("X");
+  const[playerX,setPlayerX]=useState(true);
 
   // const[squareValue,setSquareValue]=useState("");
 
@@ -26,8 +26,9 @@ function App() {
         value={squares[i]}
         onClick={() => {
           const nextSquares = squares.slice();
-          nextSquares[i] = 'X';
+          nextSquares[i] = playerX ? 'X' :'O';
           setSquares(nextSquares);
+          setPlayerX(!playerX);
         }}
       />;
     }
