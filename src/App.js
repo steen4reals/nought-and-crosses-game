@@ -6,25 +6,32 @@ import { useState } from "react";
 import Game from './Game/index'
 
 function App() {
-  const playerArray= ['X','O'];
+  // const playerArray= ['X','O'];
 
-  const[player,setPlayer]=useState("X");
+  // const[player,setPlayer]=useState("X");
 
-  const[squareValue,setSquareValue]=useState("");
+  // const[squareValue,setSquareValue]=useState("");
+
+  const [ squares, setSquares ] = useState(Array(9).fill(null));
   
-  function setSquareValueFunc(value){
-    console.log(value,player);
+  // function setSquareValueFunc(value){
+  //   console.log(value,player);
     
-    value= setSquareValue(player);
-    console.log(value);
-    }
+  //   value= setSquareValue(player);
+  //   console.log(value);
+  //   }
 
-  function renderSquare(i){
-
-    return <Square value = {i} setSquareValue={setSquareValueFunc}/>
+    function renderSquare(i) {
+      return <Square
+        value={squares[i]}
+        onClick={() => {
+          const nextSquares = squares.slice();
+          nextSquares[i] = 'X';
+          setSquares(nextSquares);
+        }}
+      />;
     }
-    
-    
+   
   return (
     <div className="App">
         <h1>Tic-tac-toe</h1>
