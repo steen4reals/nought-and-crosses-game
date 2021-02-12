@@ -25,6 +25,10 @@ function App() {
       return <Square
         value={squares[i]}
         onClick={() => {
+          if (calculateWinner(squares) || squares[i]) {
+            console.log(squares)
+            return;
+          }
           const nextSquares = squares.slice();
           nextSquares[i] = playerX ? 'X' :'O';
           setSquares(nextSquares);
@@ -69,7 +73,7 @@ function App() {
     <div className="App">
         <h1>Tic-tac-toe</h1>
         <Game renderSquare={renderSquare} />
-
+       
     </div>
   );
 }
