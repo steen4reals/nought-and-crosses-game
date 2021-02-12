@@ -10,8 +10,10 @@ function App() {
 
   const[player,setPlayer]=useState("X");
   
+  
+
   function renderSquare(i){
-    return <Square/>
+    return <Square value = {i}/>
     };
     
     

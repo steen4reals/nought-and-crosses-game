@@ -1,11 +1,11 @@
 import React from 'react';
 
 
-function Square(){
+function Square({value}){
    
           return (
             <button className="square">
-            {/* TODO */}
+            {value}
             </button>
           );
 };
