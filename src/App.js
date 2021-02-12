@@ -14,14 +14,14 @@ function App() {
   
   function setSquareValueFunc(value){
     console.log(value,player);
-    value= setSquareValue(player);
-    return value;
+    return setSquareValue(player);
   }
 
-  function renderSquare(i){
+  function renderSquare(player){
 
-    return <Square value = {i} setSquareValue={setSquareValueFunc}/>
-    };
+    return <Square value = {player}/>;
+    // setSquareValue={setSquareValueFunc}/>
+    }
     
     
   return (
