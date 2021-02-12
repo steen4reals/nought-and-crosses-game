@@ -26,7 +26,7 @@ function App() {
         value={squares[i]}
         onClick={() => {
           if (calculateWinner(squares) || squares[i]) {
-            console.log(squares)
+            alert(`We have a winner!`);
             return;
           }
           const nextSquares = squares.slice();
