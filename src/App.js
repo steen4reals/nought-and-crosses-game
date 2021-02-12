@@ -26,9 +26,15 @@ function App() {
         value={squares[i]}
         onClick={() => {
           if (calculateWinner(squares) || squares[i]) {
-            alert(`We have a winner!`);
+              if(playerX ===true){
+            alert(`O is winner!`);
+              }else{
+                alert("X is the winner")
+              }
             return;
           }
+
+          
           const nextSquares = squares.slice();
           nextSquares[i] = playerX ? 'X' :'O';
           setSquares(nextSquares);
@@ -68,7 +74,11 @@ function App() {
       return null;
     }
 
-   
+  
+
+
+
+
   return (
     <div className="App">
         <h1>Tic-tac-toe</h1>
