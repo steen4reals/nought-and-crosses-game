@@ -10,10 +10,13 @@ function App() {
 
   const[player,setPlayer]=useState("X");
   
-  
+  function setSquareValue(event){
+    setPlayer = event.target.value;
+  }
 
   function renderSquare(i){
-    return <Square value = {i}/>
+
+    return <Square value = {null}/>
     };
     
     
