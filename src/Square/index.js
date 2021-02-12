@@ -1,10 +1,10 @@
 import React from 'react';
 
 
-function Square({value}){
+function Square({setSquareValue,value}){
    
           return (
-            <button className="square" onClick={()=>  `)}>
+            <button className="square" onClick={()=>setSquareValue(value)}>
             {value}
             </button>
           );

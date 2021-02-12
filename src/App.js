@@ -9,14 +9,18 @@ function App() {
   const playerArray= ['X','O'];
 
   const[player,setPlayer]=useState("X");
+
+  const[squareValue,setSquareValue]=useState("");
   
-  function setSquareValue(event){
-    setPlayer = event.target.value;
+  function setSquareValueFunc(value){
+    console.log(value,player);
+    value= setSquareValue(player);
+    return value;
   }
 
   function renderSquare(i){
 
-    return <Square value = {null}/>
+    return <Square value = {i} setSquareValue={setSquareValueFunc}/>
     };
     
     
