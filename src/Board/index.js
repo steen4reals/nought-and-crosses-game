@@ -4,7 +4,7 @@ import React from "react";
 function Board({renderSquare}){
   
     return(
-                  <div>
+                  <div className="board">
                     {/* <div className="status">{status}</div> */}
                     <div className="board-row">
                       {renderSquare(0)}

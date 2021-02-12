@@ -60,7 +60,7 @@ function App() {
 
   return (
     <div className="App">
-        <h1>Tic-tac-toe</h1>
+        <h1>Tic-tac-👣</h1>
         <Game renderSquare={renderSquare} />
       
        
