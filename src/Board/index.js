@@ -2,6 +2,7 @@ import React from "react";
 
 
 function Board({renderSquare}){
+  
     return(
                   <div>
                     {/* <div className="status">{status}</div> */}
